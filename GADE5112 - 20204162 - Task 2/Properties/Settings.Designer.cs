@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GADE5112___20204162___Task_1.Properties
+namespace GADE5112___20104162___Task_1.Properties
 {
 
 

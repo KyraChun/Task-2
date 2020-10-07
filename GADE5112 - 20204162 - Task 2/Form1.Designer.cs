@@ -1,4 +1,4 @@
-﻿namespace GADE5112___20204162___Task_1
+﻿namespace GADE5112___20104162___Task_1
 {
     partial class Form1
     {
@@ -83,7 +83,7 @@
             // 
             this.heroAttack_ListBox.FormattingEnabled = true;
             this.heroAttack_ListBox.ItemHeight = 16;
-            this.heroAttack_ListBox.Location = new System.Drawing.Point(375, 173);
+            this.heroAttack_ListBox.Location = new System.Drawing.Point(375, 183);
             this.heroAttack_ListBox.Name = "heroAttack_ListBox";
             this.heroAttack_ListBox.Size = new System.Drawing.Size(134, 100);
             this.heroAttack_ListBox.TabIndex = 4;

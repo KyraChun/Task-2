@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GADE5112___20204162___Task_1
+namespace GADE5112___20104162___Task_1
 {
     public partial class Form1 : Form
     {
