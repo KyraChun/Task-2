@@ -8,7 +8,7 @@ namespace GADE5112___20104162___Task_1
 {
     class Hero : Character
     {
-        //Qu 2.6 : Concrete Hero subclass, which inherits from Character.
+        //Concrete Hero subclass, which inherits from Character.
 
         public Hero(int positionX, int positionY, int heroHP, char symbol) : base(positionX, positionY, symbol)
         {

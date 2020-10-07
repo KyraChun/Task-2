@@ -9,7 +9,7 @@ namespace GADE5112___20104162___Task_1
 {
     abstract class Enemy : Character
     {
-        //Qu 2.4 : The abstract Enemy class which inherits from Character.
+        //The abstract Enemy class which inherits from Character.
 
         protected Random random = new Random();
 

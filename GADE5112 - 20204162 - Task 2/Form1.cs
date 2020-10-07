@@ -26,5 +26,10 @@ namespace GADE5112___20104162___Task_1
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

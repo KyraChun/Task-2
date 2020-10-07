@@ -8,10 +8,10 @@ namespace GADE5112___20104162___Task_1
 {
     abstract class Character : Tile
     {
-        //Qu 2.2 : This abstract base class is called Character and it inherits from Tile.
+        //This abstract base class is called Character and it inherits from Tile.
         //This is the true base class for your Hero and Goblin classes.
 
-        protected int[,] characterVisionArray;
+        protected Tile[,] characterVisionArray;
         public int characterHP
         { get; set; }
         protected int characterMaxHP
@@ -27,16 +27,29 @@ namespace GADE5112___20104162___Task_1
             base.X = positionX;
         }
 
+        public Tile[,] characterVision
+        {
+            get
+            {
+                return characterVisionArray;
+            }
+            set
+            {
+                characterVisionArray = value;
+            }
+
+        }
+
         public enum Movement
         {
             NoMovement = 0,
-            Up = 1, //ConsoleKey.UpArrow,
-            Down = 2, //ConsoleKey.DownArrow
-            Left = 3, //ConsoleKey.LeftArrow
-            Right = 4, //ConsoleKey.RightArrow
+            Up = 1,
+            Down = 2,
+            Left = 3,
+            Right = 4,
         }
 
-        //Qu 2.3 :  The Character class contains the following methods, most of which define generic implementations for all characters to use.
+        //The Character class contains the following methods, most of which define generic implementations for all characters to use.
         public virtual void Attack(Character target)
         {
             //Attacks a target and decreases its health by the attacking character’s damage.
@@ -62,16 +75,55 @@ namespace GADE5112___20104162___Task_1
             //Checks if a target is in range of a character.
 
             int distanceToTarget = DistanceTo(target);
-            return true;
+            // Change 1 when weapons implemented
+            if (distanceToTarget <= 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         private int DistanceTo(Character target)
         {
             //Determines the absolute distance.
-
-            int distanceX = target.X - X;
-            int distanceY = target.Y - Y;
-            return Math.Abs(distanceX + distanceY);
+            int distanceX, distanceY, tempx, tempy;
+            distanceX = 0;
+            distanceY = 0;
+            bool posorneg;
+            if (target.X > X) { posorneg = true; } else { posorneg = false; }
+            tempx = X;
+            while (tempx != target.X)
+            {
+                if (posorneg)
+                {
+                    tempx++;
+                    distanceX++;
+                }
+                else
+                {
+                    tempx--;
+                    distanceX++;
+                }
+            }
+            if (target.Y > Y) { posorneg = true; } else { posorneg = false; }
+            tempy = Y;
+            while (tempy != target.Y)
+            {
+                if (posorneg)
+                {
+                    tempy++;
+                    distanceY++;
+                }
+                else
+                {
+                    tempy--;
+                    distanceY++;
+                }
+            }
+            return distanceX + distanceY;
         }
 
         public void Move(Movement move)

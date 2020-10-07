@@ -8,7 +8,9 @@ namespace GADE5112___20104162___Task_1
 {
     abstract class Tile
     {
-        //Qu 2.1 : This is my abstract Tile class that will contain all in-game object postions.
+        //This is an abstract Tile class that will contain all in-game object postions.
+        public int x, y;
+
         protected int X
         {
             get
@@ -17,7 +19,7 @@ namespace GADE5112___20104162___Task_1
             }
             set
             {
-
+                X = value;
             }
         }
 
@@ -30,7 +32,7 @@ namespace GADE5112___20104162___Task_1
             }
             set
             {
-
+                Y = value;
             }
         }
 
