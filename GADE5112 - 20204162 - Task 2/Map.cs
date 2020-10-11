@@ -52,11 +52,11 @@ namespace GADE5112___20104162___Task_1
             {
                 for (int i = -1; i < 2; i++)
                 {
-                    if (i + temp.x > mapHeight || i + temp.x < 0) { continue; }
+                    if (i + temp.X > mapHeight || i + temp.X < 0) { continue; }
                     for (int k = -1; k < 2; k++)
                     {
-                        if (k + temp.y > mapHeight || k + temp.y < 0) { continue; }
-                        tempTile[temp.x + i, temp.y + k] = mapArray[temp.x + i, temp.y + k];
+                        if (k + temp.Y > mapHeight || k + temp.Y < 0) { continue; }
+                        tempTile[temp.X + i, temp.Y + k] = mapArray[temp.X + i, temp.Y + k];
                         temp.characterVision = tempTile;
                     }
                 }

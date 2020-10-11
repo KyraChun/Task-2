@@ -36,10 +36,6 @@
             this.enemyStats_LB = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.attack_BTN = new System.Windows.Forms.Button();
-            this.up_btn = new System.Windows.Forms.Button();
-            this.left_btn = new System.Windows.Forms.Button();
-            this.right_btn = new System.Windows.Forms.Button();
-            this.down_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // map_LB
@@ -123,53 +119,12 @@
             this.attack_BTN.Text = "Attack";
             this.attack_BTN.UseVisualStyleBackColor = true;
             // 
-            // up_btn
-            // 
-            this.up_btn.Location = new System.Drawing.Point(217, 391);
-            this.up_btn.Name = "up_btn";
-            this.up_btn.Size = new System.Drawing.Size(96, 46);
-            this.up_btn.TabIndex = 8;
-            this.up_btn.Text = "Up";
-            this.up_btn.UseVisualStyleBackColor = true;
-            // 
-            // left_btn
-            // 
-            this.left_btn.Location = new System.Drawing.Point(110, 449);
-            this.left_btn.Name = "left_btn";
-            this.left_btn.Size = new System.Drawing.Size(96, 40);
-            this.left_btn.TabIndex = 9;
-            this.left_btn.Text = "Left";
-            this.left_btn.UseVisualStyleBackColor = true;
-            this.left_btn.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // right_btn
-            // 
-            this.right_btn.Location = new System.Drawing.Point(322, 444);
-            this.right_btn.Name = "right_btn";
-            this.right_btn.Size = new System.Drawing.Size(96, 45);
-            this.right_btn.TabIndex = 10;
-            this.right_btn.Text = "Right";
-            this.right_btn.UseVisualStyleBackColor = true;
-            // 
-            // down_btn
-            // 
-            this.down_btn.Location = new System.Drawing.Point(217, 505);
-            this.down_btn.Name = "down_btn";
-            this.down_btn.Size = new System.Drawing.Size(96, 43);
-            this.down_btn.TabIndex = 11;
-            this.down_btn.Text = "Down";
-            this.down_btn.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.BurlyWood;
-            this.ClientSize = new System.Drawing.Size(530, 560);
-            this.Controls.Add(this.down_btn);
-            this.Controls.Add(this.right_btn);
-            this.Controls.Add(this.left_btn);
-            this.Controls.Add(this.up_btn);
+            this.ClientSize = new System.Drawing.Size(530, 382);
             this.Controls.Add(this.attack_BTN);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.enemyStats_LB);
@@ -196,10 +151,6 @@
         private System.Windows.Forms.Label enemyStats_LB;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button attack_BTN;
-        private System.Windows.Forms.Button up_btn;
-        private System.Windows.Forms.Button left_btn;
-        private System.Windows.Forms.Button right_btn;
-        private System.Windows.Forms.Button down_btn;
     }
 }
 

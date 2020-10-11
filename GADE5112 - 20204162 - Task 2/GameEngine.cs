@@ -13,10 +13,21 @@ namespace GADE5112___20104162___Task_1
             this.map = map;
         }
 
-        //Qu 3.3 : Create the GameEngine class.
+        //Create the GameEngine class.
 
-        private Map map
-        { public get; set; }
+        protected Map Map;
+
+        public Map map
+        {
+            get
+            {
+                return Map;
+            }
+            set
+            {
+                map = value;
+            }
+        }
 
 
     public bool MovePlayer(Character.Movement direction)
