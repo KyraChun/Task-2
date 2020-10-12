@@ -13,7 +13,7 @@ namespace GADE5112___20104162___Task_1
 
         protected Random random = new Random();
 
-        public Enemy(int enemyHP, int enemyDamage, int positionX, int positionY, string enemyClassName, char symbol = 'E') : base(positionX, positionY, symbol)
+        public Enemy(int enemyHP, int enemyDamage, int positionX, int positionY, char symbol = 'E') : base(positionX, positionY, symbol)
         {
             //Enemy constructor that receives X and Y positions, an enemy’s damage and it is starting HP(and thus also max HP) and its symbol.
             //It delegates its X and Y position to the Character subclass via a constructor initialiser.

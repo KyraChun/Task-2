@@ -28,7 +28,7 @@ namespace GADE5112___20104162___Task_1
             //      Damage: 2
             //      [X, Y]
 
-            return $"Player Stats: \n HP: {base.characterHP} / {base.characterMaxHP} \n Damage: {base.characterDamage} \n ({base.X} , {base.Y})";
+            return $"Player Stats: \n HP: {base.characterHP} / {base.characterMaxHP} \n Damage: {base.characterDamage} \n Gold: {base.goldPurse} \n ({base.X} , {base.Y})";
         }
 
         public override Movement ReturnMove(Movement move)

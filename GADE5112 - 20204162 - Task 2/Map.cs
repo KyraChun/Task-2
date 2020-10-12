@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GADE5112___20204162___Task_1;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace GADE5112___20104162___Task_1
 {
-    class Map        
+    [Serializable]
+    class Map
     {
         //This is my Map class that contains : 
         //      A 2D Tile array to represent the map.
@@ -17,15 +19,21 @@ namespace GADE5112___20104162___Task_1
 
         protected Tile[,] mapArray;
         protected Enemy[] numEnemies;
+
+        //You must create a new Item array that stores items that exist on the map.
+        protected Item[] itemArray;
         protected Hero newHero;
         protected int mapWidth;
         protected int mapHeight;
         protected Random random = new Random();
 
-        public Map(int minWidth, int maxWidth, int minHeight, int maxHeight, int numberEnemies)
+        public Map(int minWidth, int maxWidth, int minHeight, int maxHeight, int numberEnemies, int gold)
         {
             //A constructor that receives a minimum and maximum width, minimum and maximum height and number of enemies.
-            
+
+            //You should also tweak your Map constructor to take an additional parameter: 
+            //      the amount of gold drops on the map, which is then used as your initial size for your items array.
+
             int mapWidth = random.Next(minWidth, maxWidth);
             int mapHeight = random.Next(minHeight, maxHeight);
 
@@ -70,6 +78,7 @@ namespace GADE5112___20104162___Task_1
             Tile tempTile = null;
             int randomX = random.Next(1, mapWidth);
             int randomY = random.Next(1, mapHeight);
+            int gold = random.Next(1, 6);
             int heroHP = 0;
             char heroSymbol = 'H';
             while (mapArray[randomX, randomY] != null)
@@ -84,9 +93,22 @@ namespace GADE5112___20104162___Task_1
                     tempTile = new Hero(randomX, randomY, heroHP, heroSymbol);
                     break;
                 case Tile.TileType.Enemy:
-                    tempTile = new Goblin(randomX, randomY);
+                    //Q.3.1. Integrate the Gold and Mage classes into your existing GameEngine and Map classes.
+
+                    //Your Enemy array in map should now randomize between Goblins and Mages.
+                    int typeEnemy = random.Next(3);
+                    if (typeEnemy <= 1)
+                    {
+                        tempTile = new Goblin(randomX, randomY);
+                    }
+                    else
+                    {
+                        tempTile = new Mage(randomX, randomY);
+                    }
+
                     break;
                 case Tile.TileType.Gold:
+                    tempTile = new Gold(randomX, randomY);
                     break;
                 case Tile.TileType.Weapon:
                     break;
@@ -95,6 +117,11 @@ namespace GADE5112___20104162___Task_1
             }
             mapArray[randomX, randomY] = tempTile;
             return tempTile;
+        }
+
+        public Item GetItemAtPosition(int x, int y)
+        {
+            return 0;
         }
     }
 }

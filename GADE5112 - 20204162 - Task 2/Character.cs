@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GADE5112___20204162___Task_1;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,8 @@ namespace GADE5112___20104162___Task_1
         protected int characterMaxHP
         { get; set; }
         public int characterDamage
+        { get; set; }
+        public int goldPurse
         { get; set; }
 
         public Character(int positionX, int positionY, char symbol) : base()
@@ -75,7 +78,7 @@ namespace GADE5112___20104162___Task_1
             //Checks if a target is in range of a character.
 
             int distanceToTarget = DistanceTo(target);
-            // Change 1 when weapons implemented
+            // Change 1 when weapons implemented.
             if (distanceToTarget <= 1)
             {
                 return true;
@@ -129,6 +132,7 @@ namespace GADE5112___20104162___Task_1
         public void Move(Movement move)
         {
             //The Move method edits a unit’s X and Y values to move it up / down / left / right based on the identifier from the enum.
+            //Edited Character's Move() method to cater for a move parameter that denotes no movement.
             switch (move)
             {
                 case Movement.Up:
@@ -147,9 +151,30 @@ namespace GADE5112___20104162___Task_1
                     X += 1;
                     break;
 
+                case Movement.NoMovement:
+                    X = 0;
+                    Y = 0;
+                    break;
+
                 default:
                     X = X;
                     Y = Y;
+                    break;
+            }
+        }
+
+        public void Pickup(Item i)
+        {
+            //Qu 3.2 : Edit your Character and Map and GameEngine classes to allow Items to be picked up by Characters.
+
+            Tile tempTile = null;
+
+            switch (i)
+            {
+                case TileType.Gold:
+                    goldPurse += Gold();
+                    break;
+                default:
                     break;
             }
         }

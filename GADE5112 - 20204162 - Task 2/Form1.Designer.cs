@@ -36,6 +36,7 @@
             this.enemyStats_LB = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.attack_BTN = new System.Windows.Forms.Button();
+            this.save_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // map_LB
@@ -119,12 +120,23 @@
             this.attack_BTN.Text = "Attack";
             this.attack_BTN.UseVisualStyleBackColor = true;
             // 
+            // save_btn
+            // 
+            this.save_btn.Location = new System.Drawing.Point(182, 417);
+            this.save_btn.Name = "save_btn";
+            this.save_btn.Size = new System.Drawing.Size(186, 46);
+            this.save_btn.TabIndex = 8;
+            this.save_btn.Text = "Save";
+            this.save_btn.UseVisualStyleBackColor = true;
+            this.save_btn.Click += new System.EventHandler(this.save_btn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.BurlyWood;
-            this.ClientSize = new System.Drawing.Size(530, 382);
+            this.ClientSize = new System.Drawing.Size(536, 475);
+            this.Controls.Add(this.save_btn);
             this.Controls.Add(this.attack_BTN);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.enemyStats_LB);
@@ -136,6 +148,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Rogue Game";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,6 +164,7 @@
         private System.Windows.Forms.Label enemyStats_LB;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button attack_BTN;
+        private System.Windows.Forms.Button save_btn;
     }
 }
 
